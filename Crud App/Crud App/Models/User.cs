@@ -18,7 +18,7 @@ namespace Crud_App.Models
         [Required]
         public string Email { get; set; }
         [Display(Name = "Phone Number")]
-        [StringLength(11, MinimumLength = 11)]
+        [Range(01000000000, 19999999999)]
         [Required]
         public int Phonenumber { get; set; }
         [RegularExpression("^((?!-)[A-Za-z0-9-]" + "{1,63}(?<!-)\\.)" + "+[A-Za-z]{2,6}")]
